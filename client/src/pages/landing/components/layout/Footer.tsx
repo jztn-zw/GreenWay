@@ -19,7 +19,7 @@ const scrollTo = (id: string) => {
     ?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-const Footer: React.FC<FooterProps> = ({ onLoginClick, onSignupClick }) => {
+const Footer: React.FC<FooterProps> = ({ onLoginClick }) => {
   return (
     <footer
       className="pt-16 pb-7"

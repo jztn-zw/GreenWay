@@ -54,11 +54,6 @@ const LoginModal: React.FC<LoginModalProps> = ({
     [identifier],
   );
 
-  const labelMap = {
-    email: "Email Address",
-    phone: "Phone Number",
-    username: "Username",
-  };
 
   const placeholderMap = {
     email: "you@example.com",
