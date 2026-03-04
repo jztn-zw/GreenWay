@@ -1,0 +1,72 @@
+/* 1. External font imports MUST come first */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* 2. Tailwind directive comes next */
+@import "tailwindcss";
+
+/* 3. Tell Tailwind v4 to use class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+/* 4. Your custom global styles follow */
+:root {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global Custom Scrollbar Utility */
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #D9E0DF transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #D9E0DF;
+    border-radius: 20px;
+    border: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #B8C3C1;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #F7FAF9 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}/* Autofill — Dark Mode */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #0D2B26 inset !important;
+  -webkit-text-fill-color: #E8F5F3 !important;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+}
